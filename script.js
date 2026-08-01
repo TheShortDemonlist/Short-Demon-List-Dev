@@ -14,14 +14,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /**
- * Fetch levels.json and players.json from the server
+ * Fetch levels.json and players.json from the data/ folder
  */
 async function loadListData() {
   try {
-    // Fetch both JSON files concurrently
+    // Updated paths to include the data/ directory
     const [levelsResponse, playersResponse] = await Promise.all([
-      fetch('levels.json'),
-      fetch('players.json')
+      fetch('data/levels.json'),
+      fetch('data/players.json')
     ]);
 
     // Parse JSON data
@@ -30,7 +30,6 @@ async function loadListData() {
 
     // Set initial selected level to the #1 ranked level
     if (levelsData.length > 0) {
-      // Sort to guarantee #1 is selected first
       const sorted = [...levelsData].sort((a, b) => a.rank - b.rank);
       selectedLevelId = sorted[0].id;
     }
@@ -44,7 +43,7 @@ async function loadListData() {
     console.error("Error loading JSON list data:", error);
     const detailsPanel = document.getElementById("level-details-panel");
     if (detailsPanel) {
-      detailsPanel.innerHTML = `<div class="placeholder-msg" style="color: var(--primary-red);">Failed to load list data. Make sure levels.json and players.json exist!</div>`;
+      detailsPanel.innerHTML = `<div class="placeholder-msg" style="color: var(--primary-red);">Failed to load list data. Make sure data/levels.json and data/players.json exist!</div>`;
     }
   }
 }
