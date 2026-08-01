@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Short Demonlist</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Optional Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header class="navbar">
+    <div class="logo">
+      <h1>The Short Demonlist</h1>
+    </div>
+    <nav class="nav-tabs">
+      <button class="tab-btn active" data-tab="main-list">Main List</button>
+      <button class="tab-btn" data-tab="leaderboard">Leaderboard</button>
+      <button class="tab-btn" data-tab="submit-record">Submit Record</button>
+    </nav>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="container">
+
+    <!-- 1. MAIN LIST VIEW -->
+    <section id="main-list" class="tab-content active">
+      <div class="two-column-layout">
+        
+        <!-- Left Column: Level Selection & Details -->
+        <div class="left-col">
+          <h2>Demons</h2>
+          <div class="level-selection-container">
+            <!-- Level Cards dynamic sidebar -->
+            <div id="level-list-sidebar" class="level-list-sidebar">
+              <!-- Dynamically populated -->
+            </div>
+
+            <!-- Detailed Level View -->
+            <div id="level-details-panel" class="level-details-panel">
+              <div class="placeholder-msg">Select a level to view details</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: List Information & Rules -->
+        <aside class="right-col info-card">
+          <h2>List Information</h2>
+          <p>Welcome to <strong>The Short Demonlist</strong>, tracking the hardest ultra-short levels in Geometry Dash.</p>
+          
+          <h3>Guidelines & Requirements</h3>
+          <ul>
+            <li><strong>Length Limit:</strong> Levels must be classified as Tiny or Short (under 30 seconds).</li>
+            <li><strong>Video Proof:</strong> Clicks/taps must be clearly audible throughout the entire video.</li>
+            <li><strong>Unedited Raw Footages:</strong> Raw audio and uncut video recording are required upon submission.</li>
+            <li><strong>No Modifications:</strong> Hacks altering physics, hitboxes, or speed are strictly banned. FPS bypass is allowed up to 360 FPS.</li>
+          </ul>
+
+          <h3>Scoring System</h3>
+          <p>Points are allocated using an exponential decay curve based on placement:</p>
+          <code>Points = 250 &times; (0.95)<sup>(Rank - 1)</sup></code>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- 2. LEADERBOARD VIEW -->
+    <section id="leaderboard" class="tab-content">
+      <div class="leaderboard-container info-card">
+        <h2>Player Leaderboard</h2>
+        <table class="leaderboard-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Player Name</th>
+              <th>Completions</th>
+              <th>Total Points</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboard-body">
+            <!-- Dynamically populated -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 3. SUBMIT RECORD VIEW -->
+    <section id="submit-record" class="tab-content">
+      <div class="submit-container info-card">
+        <h2>Submit a Record</h2>
+        <p>Beat a level on the list? Submit your video proof below to get placed on the leaderboard!</p>
+        <!-- Replace href with your actual Google Form link -->
+        <a href="https://forms.google.com" target="_blank" rel="noopener noreferrer" class="cta-submit-btn">
+          Open Submission Form
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
