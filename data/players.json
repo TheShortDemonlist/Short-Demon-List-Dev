@@ -9,11 +9,33 @@
     ]
   },
   {
-    "name": "MrSwapperoo",
+    "name": "Tenko",
+    "completions": [
+      {
+        "level_id": 101,
+        "video_link": "https://youtu.be/bugq8HUxz9s?si=BcXoeKHLabQCEq5u"
+      }
+    ]
+  },
+  {
+    "name": "silvxtr",
+    "completions": [
+      {
+        "level_id": 101,
+        "video_link": "https://medal.tv/games/geometry-dash/clips/npWy6BHq3Rcl0Wrck?invite=cr-MSxieU0sNTAzODYzMDM1"
+      }
+    ]
+  },
+  {
+    "name": "MrSwaperoo",
     "completions": [
       {
         "level_id": 101,
         "video_link": "https://www.youtube.com/watch?v=OU34yYOa__g"
+      },
+      {
+        "level_id": 102,
+        "video_link": "https://www.youtube.com/watch?v=j2SuiGZ6yVk"
       }
     ]
   },
